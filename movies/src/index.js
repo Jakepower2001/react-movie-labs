@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import HomePage from "./pages/homePage";
-import MovieDetailsPage from './pages/movieDetailsPage'
+import MovieDetailsPage from './pages/movieDetailsPage';
 
 const images = [
   "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
