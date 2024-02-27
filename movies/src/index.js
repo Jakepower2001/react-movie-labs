@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState, useEffect}  from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
+import { useParams } from 'react-router-dom';
 
 const App = () => {
   return (
