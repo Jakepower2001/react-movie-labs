@@ -6,7 +6,20 @@ import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import { useParams } from 'react-router-dom';
 import MovieReviewPage from "./pages/movieReviewPage";
-import SiteHeader from './components/siteHeader'
+import SiteHeader from './components/siteHeader';
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
+import UpcomingMoviePage from "./pages/upcomingMoviePage";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 360000,
+      refetchInterval: 360000, 
+      refetchOnWindowFocus: false
+    },
+  },
+});
 
 const App = () => {
   return (
@@ -19,6 +32,7 @@ const App = () => {
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={ <Navigate to="/" /> } />
+        <Route path="/movies/upcoming" element={ <UpcomingMoviePage/>} />
       </Routes>
   
     </BrowserRouter>
