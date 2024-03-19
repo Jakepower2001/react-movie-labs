@@ -3,7 +3,8 @@ import PageTemplate from '../components/templateMovieListPage'
 import { getMovies } from "../api/tmdb-api";
 import { getUpcomingMovies } from "../api/tmdb-api";
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
-
+import PlaylistAddIcon from '../components/cardIcons/playlistAdd'
+import AddToPlaylistIcon from "../components/cardIcons/playlistAdd";
 const UpcomingMoviePage = (props) => {
   const [movies,  setMovies] = useState([]);
   const favorites = movies.filter(m => m.favorite)
@@ -26,9 +27,8 @@ const UpcomingMoviePage = (props) => {
     <PageTemplate
       title='Discover Upcoming Movies'
       movies={movies}
-      selectFavorite={addToFavorites}
       action={(movie)=>{
-        return <AddToFavoritesIcon movie={movie} />
+        return <AddToPlaylistIcon movie={movie} />
         }}
     />
   );
