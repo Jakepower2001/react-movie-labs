@@ -77,6 +77,7 @@ const sampleData = {
     video: false,
     vote_average: 7,
     vote_count: 9692,
+    vote_average:2222,
   };
 
 export default sampleData;
