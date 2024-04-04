@@ -8,7 +8,7 @@ import WriteReview from "../components/cardIcons/writeReview";
 import RemoveFromPlaylist from "../components/cardIcons/removeFromPlaylist";
 
 const PlaylistPage = () => {
-  const {playlist: movieIds } = useContext(MoviesContext);
+  const {playlists: movieIds } = useContext(MoviesContext);
 
   // Create an array of queries and run in parallel.
   const PlaylistQueries = useQueries(
@@ -48,6 +48,5 @@ const PlaylistPage = () => {
     />
   );
     }
-
 
 export default PlaylistPage;
