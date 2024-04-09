@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ActorDetails from "../components/actorDetails/";
-import PageTemplate from "../components/actorPageTemplate";
+import ActorDetails from "../components/actorDetails/index";
+import PageTemplate from "../components/templateActorPage";
 import { getActor} from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
-const ActorsPage = (props) => {
+const ActorPage = (props) => {
     const {id} = useParams();
     const {data: actor, error, isLoading, isError}  = useQuery(
         ["actor", { id: id}],
@@ -36,4 +36,4 @@ const ActorsPage = (props) => {
     );
 };
 
-export default ActorsPage;
+export default ActorPage;

@@ -1,10 +1,10 @@
-import React, {useState, useEffect}  from "react";
+import React  from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
+import ActorPage from "./pages/actorDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
-import { useParams } from 'react-router-dom';
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader';
 import { QueryClientProvider, QueryClient } from "react-query";
@@ -13,7 +13,7 @@ import UpcomingMoviePage from "./pages/upcomingMoviePage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import PlaylistPage from "./pages/PlaylistPage";
-import ActorsPage from "./pages/ActorsPage";
+import ActorsPage from "./pages/actorsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +39,7 @@ const App = () => {
         <Route path="/actors/popular" element={ <ActorsPage/>}/>
         <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
         <Route path="/movies/playlist" element={<PlaylistPage/>} />
+        <Route path="/actors/:id" element={<ActorPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={ <Navigate to="/" /> } />
       </Routes>

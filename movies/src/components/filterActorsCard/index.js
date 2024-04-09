@@ -18,7 +18,7 @@ const formController =
 
 };
 
-export default function ActorsCardFilter(props){
+export default function FilterActorsCard(props){
     const { error, isLoading, isError} = useQuery("actors", getActors);
 
     if (isLoading) {
