@@ -52,7 +52,10 @@ const SiteHeader = ({ history }) => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             All you ever wanted to know about Movies!
           </Typography>
+          
+          
             {isMobile ? (
+          
               <>
                 <IconButton
                   aria-label="menu"

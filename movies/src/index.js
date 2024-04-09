@@ -9,10 +9,10 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader';
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools';
-import UpcomingMoviePage from "./pages/upcomingMoviePage";
+import UpcomingPage from "./pages/upcomingMoviePage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
-import PlaylistPage from "./pages/PlaylistPage";
+//import PlaylistPage from "./pages/PlaylistPage";
 import ActorsPage from "./pages/actorsPage";
 
 const queryClient = new QueryClient({
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage />} />
-        <Route path="/movies/upcoming" element={ <UpcomingMoviePage/>} />
+        <Route path="/movies/upcoming" element={ <UpcomingPage/>} />
         <Route path="/actors/popular" element={ <ActorsPage/>}/>
         <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
         <Route path="/movies/playlist" element={<PlaylistPage/>} />

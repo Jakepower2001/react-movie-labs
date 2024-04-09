@@ -26,7 +26,7 @@ const ActorHeader = (props) => {
             <ArrowBackIcon color="primary" fontSize="large" />
           </IconButton>
     
-          <Typography variant="h4" component="h3">
+          <Typography variant="h7" component="h3">
             {actor.name}
             <a href={actor.homepage}>
               <HomeIcon color="primary" />
