@@ -61,4 +61,4 @@ const ActorDetails = ({ actor }) => {
       </>
   );
 };
-export default ActorDetails ;
+export default ActorDetails;

@@ -5,11 +5,11 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { getActorImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
-import Spinner from '../spinner'
+import Spinner from '../spinner';
 
-const TemplateActorPage = ({ actor, children }) => {
-  const { data , error, isLoading, isError } = useQuery(
-    ["images", { id: actor.id }],
+const TemplateActorPage = ({ actor, children}) => {
+  const { data, error, isLoading, isError, } = useQuery(
+    ["image", { id: actor.id }],
     getActorImages
   );
 
@@ -24,7 +24,7 @@ const TemplateActorPage = ({ actor, children }) => {
 
   return (
     <>
-      <ActorsHeader actor={actor} />
+      <ActorsHeader actor={actor.id} />
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>

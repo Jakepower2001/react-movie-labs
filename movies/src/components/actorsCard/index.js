@@ -9,7 +9,7 @@ import  Typography  from "@mui/material/Typography";
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import StarRateIcon from "@mui/icons-material/StarRate";
 import  Grid  from "@mui/material/Grid";
-import img from '../../images/fiim-poster-placeholder.png';
+import img from '../../images/film-poster-placeholder.png';
 import { Link } from "react-router-dom";
 
 

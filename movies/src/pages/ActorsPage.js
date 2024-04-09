@@ -1,6 +1,6 @@
 import React from "react";
 import { getActors } from "../api/tmdb-api";
-import PageTemplate from '../components/templateActorListPage';
+import PageTemplate from '../components/actorsListPageTemplate';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 

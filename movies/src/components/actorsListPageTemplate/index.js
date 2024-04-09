@@ -2,7 +2,7 @@ import React, { useState} from "react";
 import Header from "../headerMovieList";
 import ActorsCardFilter from "../actorsCardFilter";
 import ListActor from "../listActors"
-import { Grid } from "@mui/material/Grid";
+import  Grid  from "@mui/material/Grid";
 
 function ActorListPageTemplate({ actors, name, action }) {
     const [nameFilter, setNameFilter] = useState("");
