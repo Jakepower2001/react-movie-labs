@@ -18,27 +18,18 @@ import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router-dom";
 
 export default function MovieCard({ movie, action}) {
-  const { favorites, addToFavorites, playlist, AddToPlaylist } = useContext(MoviesContext);
+  const { favorites, mustWatch } = useContext(MoviesContext);
 
   if (favorites.find((id) => id === movie.id)) {
     movie.favorite = true;
   } else {
     movie.favorite = false
   }
-  if (playlist.find((id) => id === movie.id)) {
-    movie.playlist = true;
+  if (mustWatch.find((id) => id === movie.id)) {
+    movie.mustWatch = true;
   } else {
-    movie.playlist = false
+    movie.mustWatch = false
   }
-  const handleAddToFavorite = (e) => {
-    e.preventDefault();
-    addToFavorites(movie);
-  };
-
-  const handleAddToPlaylist = (e) => {
-    e.preventDefault();
-    AddToPlaylist(movie);
-  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
